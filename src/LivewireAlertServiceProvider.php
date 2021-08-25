@@ -42,7 +42,7 @@ class LivewireAlertServiceProvider extends ServiceProvider
     protected function registerAlertPresetMacro()
     {
         Component::macro('alertPreset', function ($preset, $type = 'success', $message = '', $options = []) {
-            $options = array_merge(config('livewire-alert.presets'.$preset) ?? [], $options);
+            $options = array_merge(config('livewire-alert.presets.'.$preset) ?? [], $options);
 
             $this->dispatchBrowserEvent('alert', [
                 'type' => $type,
