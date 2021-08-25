@@ -1,11 +1,11 @@
 <?php
 
-namespace Jantinnerezo\LivewireAlert;
+namespace Pwncraft\LivewireAlert;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Jantinnerezo\LivewireAlert\Skeleton\SkeletonClass
+ * @see \pwncraft\LivewireAlert\Skeleton\SkeletonClass
  */
 class LivewireAlertFacade extends Facade
 {

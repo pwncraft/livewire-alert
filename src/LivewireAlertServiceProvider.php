@@ -1,10 +1,8 @@
 <?php
 
-namespace Jantinnerezo\LivewireAlert;
+namespace Pwncraft\LivewireAlert;
 
 use Illuminate\Support\ServiceProvider;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
-
 use Livewire\Component;
 use Illuminate\Support\Str;
 
@@ -17,6 +15,7 @@ class LivewireAlertServiceProvider extends ServiceProvider
     {
         $this->registerViews();
         $this->registerAlertMacro();
+        $this->registerAlertPresetMacro();
         $this->registerFlashMacro();
         $this->registerConfirmMacro();
         $this->registerPublishables();
@@ -31,6 +30,19 @@ class LivewireAlertServiceProvider extends ServiceProvider
     {
         Component::macro('alert', function ($type = 'success', $message = '', $options = []) {
             $options = array_merge(config('livewire-alert.alert') ?? [], $options);
+
+            $this->dispatchBrowserEvent('alert', [
+                'type' => $type,
+                'message' => $message,
+                'options' => $options
+            ]);
+        });
+    }
+
+    protected function registerAlertPresetMacro()
+    {
+        Component::macro('alertPreset', function ($preset, $type = 'success', $message = '', $options = []) {
+            $options = array_merge(config('livewire-alert.presets'.$preset) ?? [], $options);
 
             $this->dispatchBrowserEvent('alert', [
                 'type' => $type,

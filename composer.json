@@ -1,17 +1,22 @@
 {
-    "name": "jantinnerezo/livewire-alert",
+    "name": "pwncraft/livewire-alert",
     "description": "This package provides a simple alert utilities for your livewire components.",
     "keywords": [
         "jantinnerezo",
         "livewire-alert"
     ],
-    "homepage": "https://github.com/jantinnerezo/livewire-alert",
+    "homepage": "https://github.com/pwncraft/livewire-alert",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "Jantinn Erezo",
             "email": "erezojantinn@gmail.com",
+            "role": "Original Developer"
+        },
+        {
+            "name": "Mike Roquemore",
+            "email": "mikeroq@gmail.com",
             "role": "Developer"
         }
     ],
@@ -22,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jantinnerezo\\LivewireAlert\\": "src"
+            "Pwncraft\\LivewireAlert\\": "src"
         }
     },
     "scripts": {
@@ -35,10 +40,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jantinnerezo\\LivewireAlert\\LivewireAlertServiceProvider"
+                "Pwncraft\\LivewireAlert\\LivewireAlertServiceProvider"
             ],
             "aliases": {
-                "LivewireAlert": "Jantinnerezo\\LivewireAlert\\LivewireAlertFacade"
+                "LivewireAlert": "Pwncraft\\LivewireAlert\\LivewireAlertFacade"
             }
         }
     }

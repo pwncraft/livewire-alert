@@ -6,9 +6,9 @@
  */
 return [
     'alert' => [
-        'position' => 'top-end',
-        'timer' => 3000,
-        'toast' => true,
+        'position' => 'center',
+        'timer' => 2000,
+        'toast' => false,
         'text' => null,
         'showCancelButton' => false,
         'showConfirmButton' => false
@@ -23,5 +23,15 @@ return [
         'cancelButtonText' => 'No',
         'confirmButtonColor' => '#3085d6',
         'cancelButtonColor' => '#d33'
+    ],
+    'presets' => [
+        'toast' => [
+            'position' => 'top-end',
+            'toast' => true,
+            'timer' => 2000,
+            'text' => null,
+            'showCancelButton' => false,
+            'showConfirmButton' => false
+        ],
     ]
 ];

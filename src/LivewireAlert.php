@@ -1,6 +1,6 @@
 <?php
 
-namespace Jantinnerezo\LivewireAlert;
+namespace Pwncraft\LivewireAlert;
 
 class LivewireAlert
 {
